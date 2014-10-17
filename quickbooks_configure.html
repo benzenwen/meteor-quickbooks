@@ -1,0 +1,22 @@
+<template name="configureLoginServiceDialogForQuickbooks">
+  <p>
+    First, you'll need to register your app on Quickbooks Online (QBQ) <a href="https://developer.intuit.com/docs/0025_quickbooksapi/0010_getting_started/0010_signup">Instructions</a>. Hostname URL should be an external "marketing" url. App URL should be... Generally, for development you can put http://localhost:3000 for TODO Describe what to put in for the various URL fields (including the https one.  Follow these steps:
+  </p>
+  <ol>
+    <li>
+      Visit <a href="https://developer.intuit.com/Application/Create/IA" target="_blank">https://developer.intuit.com/Application/Create/IA</a>
+    </li>
+    <li>
+      Fill out the form. The Open ID URL can be a dummy domain, but does need to be SSL: https://...
+    </li>
+    <li>
+      Set AppURL to: <span class="url">{{siteUrl}}</span> 
+    </li>
+    <li>
+      Select "Save".
+    </li>
+    <li>
+      Upon successful save, you'll see your credentials (App Token, OAuth Consumer Key and OAuth Consumer Secret) in the next screen. Note that there are development and production keys.  To use the production keys, there are some Intuit-driven security and application checks.  There are limits on what the development keys can do.  Note these OAuth production tokens are long-lived (180 days) with a recommended auto-renewal flow.  TODO add instructions for that.
+    </li>
+  </ol>
+</template>
